@@ -1,18 +1,35 @@
 # Lumen PHP Framework for Eset with   Docker container
 
-### Работа с котейнерами если нужно развернуть проект на локали (Стек php-fpm7.1, Nginx,  Mysql5.7.*, docker), когда нет возможности работать на dev площадке.
+### Work with (php-fpm7.1, Nginx,  Mysql5.7.*, docker)
 
-- Склонировать репку - git@github.com:esetnod32-russia/eset-lumen.git
+- Clone your fork into the ~/Sites/laravel folder
+ `git clone git@github.com:esetnod32-russia/eset-lumen.git.`
 
-- Установить Docker и Docker-compose на локалные машины (Windows - https://docs.docker.com/compose/install/) для (MacOs - https://docs.docker.com/compose/install/) для (Linux - https://docs.docker.com/compose/install/)
+- Install Docker on the local machine (Windows - https://docs.docker.com/compose/install/) for (MacOs - https://docs.docker.com/compose/install/) for (Linux - https://docs.docker.com/compose/install/)
 
-- Перейдем в репозиторий `cd eset-lumen ` далее копируем файл конфигурации приложения `сp .env.example .env` устанавливаем зависимости `composer install`
+- Move to 
+ `cd eset-laravel` 
 
-- Далее выполним `docker-compose` если все нормально видим команды docker-compose (если машина не знает такой команды тогда проолжаем устанавливать правильно docker-compose), тогда начинаем сборку контейнера у себя на локали займет меньше минуты выполнив команду `docker-compose up -d` после сборки выполним команду `docker ps` и увидим там 3 контейнера значит все ок, вы молодец xD
+- Then running the following command 
+ `сp .env.example .env` 
 
-- Теперь осталось накотить миграции `php artisan migrate --env=console` 
+- If it works on successfully, running following command 
+ `composer install`
 
-- Далее в файле переходим на http://127.0.0.1/ порт-80 
+- Then running the following command 
+ `docker-compose` 
+
+- If doesn't work on `docker-compose` check your local Docker else running the following command 
+ `docker-compose up -d` 
+ 
+- If is ok, running the following command
+ `docker ps` 
+- You should see three Docker containers, it means You are on your way xxD
+
+- Then running the migrations `php artisan migrate` 
+
+- Please check your local-host  http://127.0.0.1/ as usual port-80
+
 
 
 
